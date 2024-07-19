@@ -1,2 +1,0 @@
-# teapoy
-site first day

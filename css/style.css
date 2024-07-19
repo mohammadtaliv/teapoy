@@ -1,0 +1,228 @@
+:root{
+    --mulish : "Mulish", sans-serif;
+    --primaryWhite : #FFFFFF;
+    --primaryblack : #000000;
+    --headerbgColor : #090909;
+    --LinkHoverColor: #dd7210;
+    --currencyDropdownBg: #101010;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+ul , li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/* ..................................................header section start...................................  */
+header{
+    background-color: var(--primaryblack);
+}
+header .col-6 , .col {
+    display: flex;
+    align-items: center;
+    height: 3em;
+} 
+a{
+    text-decoration: none;
+}
+header marquee{
+    box-shadow:0px 0px 20px 2px black inset;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+
+}
+header .row .col:first-child ul a{
+    margin-right: .8em;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primaryWhite);
+    transition: 0.5s;
+}
+header .col:first-child ul a:hover{
+    transition: 0.5s;
+    color: var(--LinkHoverColor);
+}
+
+header marquee a{
+    padding: 0 .7em;
+    font-size: 1em;
+    color: var(--primaryWhite);
+    transition: 0.5s;
+}
+header marquee a:hover {
+    transition: 0.5s;
+    color: var(--LinkHoverColor);
+}
+header input{
+    all:unset;
+    width: 50px;
+    font-size: 0.85em;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primaryWhite);
+}
+.fa-caret-down{
+    transition: 0.5s;
+    color: var(--primaryWhite);
+}
+.fa-caret-up{
+    transition: 0.5s;
+    transform: rotate(-180deg);
+}
+.currencyDropdown{
+    visibility: hidden;
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    transition: 0.5s;
+    opacity: 0;
+}
+.currencyDropdownactive{
+    visibility: visible;
+    top: 100%;
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 1;
+}
+.currencyDropdown ul{
+    background-color: var(--currencyDropdownBg);
+    border-radius: 6px;
+    padding: 5px;
+    height: 76px;
+    width: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.currencyDropdown ul li a{
+    padding: 5px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 0.89em;
+    color: var(--primaryWhite);
+    font-weight: 600;
+}
+.currencybgcolor{
+    background-color: var(--LinkHoverColor);
+}
+/* ..................................................header section End...................................  */
+
+
+
+
+.heroNav{
+    height: 110vh;
+    background: url(/assets/body-bg-image/Home-1-slider-img-05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.heroNav .col, .col-6{
+    height: 85px;
+    display: flex;
+    align-items: center;
+}
+.heroNav .logo img{
+    height: 35.41px;
+    width: 140px;
+}
+.heroNav object{
+    margin-left: .8em;
+    height: 24px;
+    width: 24px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(198deg) brightness(107%) contrast(107%);
+}
+.heroNav .col:last-child ul i{
+    margin-left: .8em;
+    background-color: var(--primaryWhite);
+    height: 1px;
+    position: relative;
+    width: 30px;
+    transition: background-color 10ms 300ms ease;
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.heroNav .col:last-child ul i::before ,.heroNav .col:last-child ul i::after{
+    background: var(--primaryWhite);
+    content: "";
+    height: 1px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: left 300ms 350ms ease, top 300ms 350ms ease, transform 300ms 50ms ease;
+}
+.heroNav .col:last-child ul i::before{
+    top: -8px;
+}
+.heroNav .col:last-child ul i::after{
+    top: 8px;
+}
+.heroNav .col-6 > ul li span:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: relative;
+    right: 0;
+    bottom: 4px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: currentColor;
+    display: inline-block;
+    margin-left: 8px;
+    transform: rotate(45deg);
+}
+
+.heroNav .col-6 ul li ul{
+    width: 200px;
+    padding: 10px;
+    background-color: var(--headerbgColor);
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+}
+.heroNav .col-6 ul li:hover ul{
+    visibility: visible;
+    top: 100%;
+    transition: 0.5s;
+    opacity: 1;
+
+}
+.heroNav .col-6 ul li ul li a{
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    
+}
+.heroNav .col-6 ul li ul li a:before{
+    color: var(--primaryWhite);
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-color: currentColor;
+    position: relative;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    margin-right: 6px;
+    margin-right: 10px;
+    top: 3px;
+    mask-image: url(/assets/body-bg-image/mask.svg);
+}
